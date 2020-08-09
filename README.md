@@ -19,8 +19,7 @@
 
 ## Overview
 
-_**bookReviews** is an online community of book reviews and ratings. Users could see a list of books with their authors, summaries, page numbers, genere, language, price, and etc, and read other people's reviews. But, users have to make accounts and be logged in to create, edit, and delete reviews and ratings.
-
+**bookReviews** is an online community of book reviews and ratings. Users could see a list of books with their authors, summaries, page numbers, genere, language, price, and etc, and read other people's reviews. But, users have to make accounts and be logged in to create, edit, and delete reviews and ratings.
 
 <br>
 
@@ -28,11 +27,48 @@ _**bookReviews** is an online community of book reviews and ratings. Users could
 
 ### Goals
 
-- _Lorem ipsum, dolor sit amet,_
-- _consectetur adipiscing elit._
-- _Phasellus dapibus fermentum risus vitae bibendum._
-- _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
-- _etc._
+### Server(Back End)
+- Have a **RESTful JSON API**.
+  - Build a **Ruby on Rails** server, exposing RESTful JSON endpoints.
+  - Build a database with at least 3 tables:
+     - users, books, and reviews/comments tables.
+  - Utilize **Rails** to define models for interacting with the database.
+  - Implement working generic controller actions for Full CRUD (`index`, `show`, `create`, `update`, `delete`) between your non-User tables 
+    - Those users who made the account and are logged in can create, update, and delete reviews.
+  - Authentication 
+
+### Client (Front End) <!-- omit in toc -->
+
+- Have a working, interactive **React** app, built using `npx create-react-app`.
+  - Have at least 8 separate, rendered components in an organized and understandable React file structure.
+  - Utilize functional and class React components appropriately.
+  - Utilize state and props in your components efficiently.
+  - Use _only_ React for DOM Manipulation.
+- Consume data from your **Ruby on Rails API**, and render that data in your components.
+- Utilize **React Router**, for client-side routing.
+- Demonstrate Full CRUD actions ( `index`, `show`, `create`, `update`, and `delete` ) on the front end.
+   - Those users who made the account and are logged in can create, update, and delete reviews.
+
+
+### Styling <!-- omit in toc -->
+
+- Be styled with CSS (or SCSS, if you'd prefer).
+- Use Flexbox or Grid in your layout design.
+- Implement 2 media queries for responsive design on 3 screen sizes (including desktop).
+
+### Linting <!-- omit in toc -->
+
+- Indent properly.
+- Utilize high-quality, semantic variable names.
+- Follow `camelCase`, `snake_case`, and `kebab-case` convention.
+- Remove unnecessary boilerplate React files and code.
+- Remove all `console.log()`s and commented out code (functional notes and comments are okay).
+
+### Deployment <!-- omit in toc -->
+
+- Deploy the fully functional front-end via Surge or Netlify.
+- Deploy the back-end via Heroku.
+
 
 <br>
 
