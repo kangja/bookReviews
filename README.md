@@ -47,16 +47,17 @@
 - Consume data from your **Ruby on Rails API**, and render that data in your components.
 - Utilize **React Router**, for client-side routing.
 - Demonstrate Full CRUD actions ( `index`, `show`, `create`, `update`, and `delete` ) on the front end.
-   - Those users who made the account and are logged in can create, update, and delete reviews.
+    - Users can view all the book lists, descriptions, and reviews whether they are logged in or not.
+    - Only those ssers who made the account and are logged in can create, update, and delete reviews.
 
 
-### Styling <!-- omit in toc -->
+### Styling
 
 - Be styled with CSS (or SCSS, if you'd prefer).
 - Use Flexbox or Grid in your layout design.
 - Implement 2 media queries for responsive design on 3 screen sizes (including desktop).
 
-### Linting <!-- omit in toc -->
+### Linting 
 
 - Indent properly.
 - Utilize high-quality, semantic variable names.
@@ -64,7 +65,7 @@
 - Remove unnecessary boilerplate React files and code.
 - Remove all `console.log()`s and commented out code (functional notes and comments are okay).
 
-### Deployment <!-- omit in toc -->
+### Deployment 
 
 - Deploy the fully functional front-end via Surge or Netlify.
 - Deploy the back-end via Heroku.
@@ -78,11 +79,11 @@
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | _Lorem ipsum dolor sit amet, consectetur._ |
-|   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
-| React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._ |
-|     Express      | _Lorem ipsum dolor sit amet, consectetur._ |
-|  Express Router  | _Lorem ipsum dolor sit amet, consectetur._ |
+|      React       | Manages Front End |
+|   React Router   | Is the process of resource navigation in a web app. This is how your app determines what to do with a client request. |
+| Rails | Manages backend server. |
+|     PostgreSQL   | Manages database. |
+|  CSS             | Styling |
 
 <br>
 
