@@ -31,6 +31,12 @@
   - Utilize **Rails** to define models for interacting with the database.
   - Implement working generic controller actions for Full CRUD (`index`, `show`, `create`, `update`, `delete`) between your non-User tables 
     - Those users who made the account and are logged in can create, update, and delete reviews.
+  - API endpoint
+    - resources :books do
+	      resources :reviews
+      resources :users 
+      post ‘/auth/login’, to: 'authentication#login'
+      get ‘auth/verify’, to: ‘authentication#verify’
   - Authentication 
 
 ### Client (Front End) <!-- omit in toc -->
