@@ -85,8 +85,6 @@
 
 #### Wireframes
 
-> Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
-
 [Desktop and Ipad Pro Wireframe Link](https://whimsical.com/8NiA4PHQBfYT525G9ReY36)
 
 [iPhone X Wireframe Link](https://whimsical.com/5V6cjJic8foqnfYwQdPc75)
@@ -101,12 +99,12 @@ src
 |__ components/
       |__ Login.jsx
       |__ Register.jsx
-      |__ ShowReviews.jsx
-      |__ CreateReview.jsx
-      |__ UpdateReview.jsx
+      |__ Header.jsx
       |__ Main.jsx
       |__ ShowBooks.jsx
-      |__ ShowReviews.jsx
+      |__ BookDetails.jsx
+      |__ ShowReviews.jsx 
+      |__ UpdateReview.jsx
 |__ services/
       |__ api-helper.js
       |__ auth.js
@@ -121,11 +119,12 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Authentication   |    H     |     2 hrs      |     2 hrs     |    hrs    |
-| Finish Backend   |    H     |     2 hrs      |     2 hrs     |    hrs    |
-| Create CRUD Actions |    H  |     3.5 hrs      |     1 hrs     |    hrs      |
-| CSS |     H     |     5 hrs      |     hrs     |    hrs      |
-| Media Queries |    M     |     3 hrs      |     hrs     |    hrs      |
+| Authentication   |    H     |     1.5 hrs      |      hrs     |    hrs    |
+| Working on Backend   |    H     |     3 hrs      |     hrs     |    hrs    |
+| Working on Frontend   |    H     |     3.5 hrs      |     hrs     |    hrs    |
+| Working on Frond End Crud   |    H     |     3.5 hrs      |     hrs     |    hrs    |
+| CSS |     H     |     3.5 hrs      |     hrs     |    hrs      |
+| Media Queries |    H     |     3 hrs      |     hrs     |    hrs      |
 | TOTAL               |          |     hrs      |      hrs     |     hrs     |
 
 
@@ -141,8 +140,10 @@ src
 ***
 
 ## Post-MVP
-
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+- Including star ratings and categorize books by highest to lowest ratings.
+- Sorting books by categories. (by alphebetically order, price, ratings, page numbers, genere, etc)
+- Implementing media queries for responsive design on other screen sizes.
+- Ask UI/UX Designers for advice and insight.
 
 ***
 
