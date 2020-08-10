@@ -21,8 +21,6 @@
 
 **bookReviews** is an online community of book reviews and ratings. Users could see a list of books with their authors, summaries, page numbers, genere, language, price, and etc, and read other people's reviews. But, users have to make accounts and be logged in to create, edit, and delete reviews and ratings.
 
-<br>
-
 ## MVP
 
 ### Goals
@@ -50,7 +48,6 @@
     - Users can view all the book lists, descriptions, and reviews whether they are logged in or not.
     - Only those ssers who made the account and are logged in can create, update, and delete reviews.
 
-
 ### Styling
 
 - Be styled with CSS (or SCSS, if you'd prefer).
@@ -69,7 +66,6 @@
 
 - Deploy the fully functional front-end via Surge or Netlify.
 - Deploy the back-end via Heroku.
-
 
 <br>
 
@@ -93,8 +89,8 @@
 
 > Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
 
-![Desktop and Ipad Pro Wireframe Link] https://whimsical.com/8NiA4PHQBfYT525G9ReY36
-![iPhone X Link]()
+[Desktop and Ipad Pro Wireframe Link] (https://whimsical.com/8NiA4PHQBfYT525G9ReY36)
+[iPhone X Wireframe Link] (https://whimsical.com/5V6cjJic8foqnfYwQdPc75)
 
 
 
