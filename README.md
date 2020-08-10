@@ -89,6 +89,10 @@
 
 [iPhone X Wireframe Link](https://whimsical.com/5V6cjJic8foqnfYwQdPc75)
 
+#### Component Tree
+![Component Tree screenshot](https://github.com/kangja/bookReviews/blob/master/Component-Tree.png)
+
+
 #### Component Hierarchy
 
 > Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
