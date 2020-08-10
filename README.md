@@ -5,6 +5,7 @@
   - [Libraries and Dependencies](#libraries-and-dependencies)
   - [Client (Front End)](#client-front-end)
     - [Wireframes](#wireframes)
+    - [Component Tree](#component-tree)
     - [Component Hierarchy](#component-hierarchy)
     - [Time Estimates](#time-estimates)
   - [Server (Back End)](#server-back-end)
@@ -13,7 +14,6 @@
 - [Code Showcase](#code-showcase)
 - [Code Issues & Resolutions](#code-issues--resolutions)
 
-<br>
 
 ## Overview
 
@@ -75,8 +75,6 @@
 
 ### Libraries and Dependencies
 
-> Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
-
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
 |      React       | Manages Front End |
@@ -100,8 +98,6 @@
 
 
 #### Component Hierarchy
-
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
 
 ``` structure
 
