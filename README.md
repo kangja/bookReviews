@@ -5,9 +5,7 @@
   - [Libraries and Dependencies](#libraries-and-dependencies)
   - [Client (Front End)](#client-front-end)
     - [Wireframes](#wireframes)
-    - [Component Tree](#component-tree)
     - [Component Hierarchy](#component-hierarchy)
-    - [Component Breakdown](#component-breakdown)
     - [Time Estimates](#time-estimates)
   - [Server (Back End)](#server-back-end)
     - [ERD Model](#erd-model)
@@ -128,14 +126,10 @@ src
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
 | Authentication   |    H     |     2 hrs      |     2 hrs     |    hrs    |
 | Finish Backend   |    H     |     2 hrs      |     2 hrs     |    hrs    |
-
-| Create CRUD Actions |    H     |     3.5 hrs      |     1 hrs     |    hrs      |
+| Create CRUD Actions |    H  |     3.5 hrs      |     1 hrs     |    hrs      |
 | CSS |     H     |     5 hrs      |     hrs     |    hrs      |
 | Media Queries |    M     |     3 hrs      |     hrs     |    hrs      |
-
-
-|
-| TOTAL               |          |     6 hrs      |     3 hrs     |     hrs     |
+| TOTAL               |          |     hrs      |      hrs     |     hrs     |
 
 
 <br>
