@@ -143,7 +143,7 @@ src
 ### Server (Back End)
 
 #### ERD Model
-
+![ERD screenshot](https://github.com/kangja/bookReviews/blob/master/ERD.png)
 
 <br>
 
