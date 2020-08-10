@@ -93,7 +93,7 @@
 
 > Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
 
-![Desktop and Ipad Pro Wireframe Link](https://whimsical.com/8NiA4PHQBfYT525G9ReY36)
+![Desktop and Ipad Pro Wireframe Link] https://whimsical.com/8NiA4PHQBfYT525G9ReY36
 ![iPhone X Link]()
 
 
