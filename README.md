@@ -103,28 +103,22 @@
 ``` structure
 
 src
-|__ assets/
-      |__ fonts
-      |__ graphics
-      |__ images
-      |__ mockups
 |__ components/
-      |__ Header.jsx
+      |__ Login.jsx
+      |__ Register.jsx
+      |__ ShowReviews.jsx
+      |__ CreateReview.jsx
+      |__ UpdateReview.jsx
+      |__ Main.jsx
+      |__ ShowBooks.jsx
+      |__ ShowReviews.jsx
 |__ services/
+      |__ api-helper.js
+      |__ auth.js
+      |__ books.js
+      |__ reviews.js
 
 ```
-
-#### Component Breakdown
-
-> Use this section to go into further depth regarding your components, including breaking down the components as stateless or stateful, and considering the passing of data between those components.
-
-|  Component   |    Type    | state | props | Description                                                      |
-| :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
-|    Header    | functional |   n   |   n   | _The header will contain the navigation and logo._               |
-|  Navigation  | functional |   n   |   n   | _The navigation will provide a link to each of the pages._       |
-|   Gallery    |   class    |   y   |   n   | _The gallery will render the posts using cards in flexbox._      |
-| Gallery Card | functional |   n   |   y   | _The cards will render the post info via props._                 |
-|    Footer    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
 
 #### Time Estimates
 
@@ -132,11 +126,17 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
+| Authentication   |    H     |     2 hrs      |     2 hrs     |    hrs    |
+| Finish Backend   |    H     |     2 hrs      |     2 hrs     |    hrs    |
 
-> _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
+| Create CRUD Actions |    H     |     3.5 hrs      |     1 hrs     |    hrs      |
+| CSS |     H     |     5 hrs      |     hrs     |    hrs      |
+| Media Queries |    M     |     3 hrs      |     hrs     |    hrs      |
+
+
+|
+| TOTAL               |          |     6 hrs      |     3 hrs     |     hrs     |
+
 
 <br>
 
