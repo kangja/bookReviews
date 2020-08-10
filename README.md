@@ -88,11 +88,8 @@
 > Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
 
 [Desktop and Ipad Pro Wireframe Link](https://whimsical.com/8NiA4PHQBfYT525G9ReY36)
+
 [iPhone X Wireframe Link](https://whimsical.com/5V6cjJic8foqnfYwQdPc75)
-
-#### Component Tree
-
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. 
 
 #### Component Hierarchy
 
