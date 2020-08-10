@@ -17,7 +17,7 @@
 
 ## Overview
 
-**bookReviews** is an online community of book reviews and ratings. Users could see a list of books with their authors, summaries, page numbers, genere, language, price, and etc, and read other people's reviews. But, users have to make accounts and be logged in to create, edit, and delete reviews and ratings.
+**bookReviews** is an online community of book reviews and ratings. Anyone could see a list of books and when any image of a book is clicked, users will be directed to the details page where it contains author names, summaries, page numbers, genere, price, and etc, and read other people's reviews. But, users have to make accounts and be logged in to create, edit, and delete their own reviews and ratings.
 
 ## MVP
 
