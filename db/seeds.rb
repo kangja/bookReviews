@@ -125,5 +125,5 @@ books= [
   }, 
 ]
 
-Book.create(books)
+Book.create!(books)
 puts "#{Book.count} books created"

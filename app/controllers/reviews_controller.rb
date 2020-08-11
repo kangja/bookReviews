@@ -3,17 +3,18 @@ class ReviewsController < ApplicationController
   before_action :set_review, only: [:show, :update, :destroy]
   before_action :authorize_request, only: [:create, :update, :destroy]
 
+   # GET /books/id/reviews/
   def index
     @reviews = Review.where(book_id: @book.id)
     render json: @reviews, include: :book, status: :ok
   end
 
-   # GET /reviews/1
+   # GET /books/id/reviews/1
    def show
     render json: @review, include: :book, status: :ok
   end
 
-  # POST /reviews
+  # POST /books/id/reviews/1
   def create
     @review = Review.new(review_params)
     @review.user = @current_user
@@ -25,7 +26,7 @@ class ReviewsController < ApplicationController
     end
   end
 
-    # PATCH/PUT /reviews/1
+    # PATCH/PUT /books/id/reviews/1
   def update
     if @review.update(review_params)
       render json: @review
@@ -34,7 +35,7 @@ class ReviewsController < ApplicationController
     end
   end
 
-    # DELETE /reviews/1
+    # DELETE /books/id/reviews/1
   def destroy
     @review.destroy
   end

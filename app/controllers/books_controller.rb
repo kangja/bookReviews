@@ -3,13 +3,13 @@ class BooksController < ApplicationController
 
   def index
     @books = Book.all
-    render json: @books, include: :review, status: :ok
+    render json: @books, include: :reviews, status: :ok
   end
 
   # GET /books/1
 
   def show
-    render json: @book, include: :review, status: :ok
+    render json: @book, include: :reviews, status: :ok
   end
 
   private
