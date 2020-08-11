@@ -14,7 +14,9 @@ class UsersController < ApplicationController
       render json: @user.errors, status: :unprocessable_entity
     end
   end
-  
+
+  private
+
     # Only allow a trusted parameter "white list" through.
     def user_params
       params.require(:user).permit(:username, :email, :password)
