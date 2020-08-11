@@ -14,7 +14,7 @@ class ReviewsController < ApplicationController
     render json: @review, include: :book, status: :ok
   end
 
-  # POST /books/id/reviews/1
+  # POST /books/id/reviews
   def create
     @review = Review.new(review_params)
     @review.user = @current_user
