@@ -10,6 +10,7 @@ class BooksController < ApplicationController
 
   def show
     render json: @book, include: :reviews, status: :ok
+
   end
 
   private
