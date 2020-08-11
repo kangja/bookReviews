@@ -12,7 +12,6 @@ class BooksController < ApplicationController
     render json: @book, include: :review, status: :ok
   end
 
-
   private
   def set_book
     @book = Book.find(params[:id])
