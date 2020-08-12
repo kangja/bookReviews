@@ -10,6 +10,7 @@ class App extends Component {
     currentUser: null
   }
 
+  // as the page first loads, we want to run handleVerify if there is a valid token in local storage we can use. If we have it, we don't need to log in again.
   componentDidMount() {
     this.handleVerify();
   }

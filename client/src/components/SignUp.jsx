@@ -22,7 +22,7 @@ export default class SignUp extends Component {
     <form onSubmit={(e) => {
       e.preventDefault();
       handleSignUp(this.state);
-      // history.push('/');
+      history.push('/');
     }}>
         <h2>Sign Up</h2>
         <h3>Your name</h3>
