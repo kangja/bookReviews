@@ -1,5 +1,4 @@
-import React, {Component} from 'react'
-import {Link} from "react-router-dom"
+import React, { Component } from 'react'
 
 export default class LogIn extends Component {
   state = {
@@ -21,7 +20,9 @@ export default class LogIn extends Component {
 
   return(
     <form onSubmit={(e) => {
+      // we don't want to lose our state
       e.preventDefault();
+      // make our api call
       handleLogin(this.state);
       history.push('/');
     }}>
@@ -50,9 +51,7 @@ export default class LogIn extends Component {
           required
           onChange={this.handleChange}
       />
-      <Link to ="/">
       <button>Submit</button>
-      </Link>
       </form>
     )
   }

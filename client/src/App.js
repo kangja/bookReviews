@@ -1,5 +1,6 @@
 import React, {Component} from "react"
 import './App.css';
+import { loginUser, registerUser, removeToken, verifyUser } from './services/auth'
 import Header from "./components/Header"
 import Main from "./components/Main"
 import { withRouter } from 'react-router-dom';
@@ -15,12 +16,12 @@ class App extends Component {
 
   handleLogin = async (userData) => {
     const currentUser = await loginUser(userData);
-    this.setState({currentUser})
+    this.setState({ currentUser })
   }
 
   handleSignUp = async (userData) => {
     const currentUser = await registerUser(userData);
-    this.setState({currentUser})
+    this.setState({ currentUser })
   }
 
   handleLogout = () => {
@@ -37,7 +38,6 @@ class App extends Component {
     this.setState({ currentUser });
   }
 
-
   render() {
     return (
       <div className="App">
@@ -48,7 +48,7 @@ class App extends Component {
         <Main
           currentUser={this.state.currentUser}
           handleLogin={this.handleLogin}
-          currentUser={this.handleLogin}
+          handleSignUp={this.handleSignUp}
         />
       </div>
     );

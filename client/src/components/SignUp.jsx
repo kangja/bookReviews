@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-// import {Link} from "react-router-dom"
 
 export default class SignUp extends Component {
   state = {
@@ -23,7 +22,7 @@ export default class SignUp extends Component {
     <form onSubmit={(e) => {
       e.preventDefault();
       handleSignUp(this.state);
-      history.push('/');
+      // history.push('/');
     }}>
         <h2>Sign Up</h2>
         <h3>Your name</h3>

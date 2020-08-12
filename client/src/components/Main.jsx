@@ -5,19 +5,21 @@ import SignUp from "./SignUp"
 
 export default class Main extends Component {
   render() {
+    const { handleLogin, handleSignUp } = this.props;
+
     return (
     <main>
       {/* ...props means history, location, match  */}
       <Route path = "/login" render = {(props) => (
         <Login
             {...props}
-            handleLogin={this.props.handleLogin}
+            handleLogin={handleLogin}
         />
         )} />
         <Route path="/signup" render = {(props) => (
           <SignUp
             {...props}
-            handleSignUp={this.props.handleSignUp}
+            handleSignUp={handleSignUp}
           />
         )} />
       </main>
