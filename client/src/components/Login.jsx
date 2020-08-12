@@ -29,8 +29,8 @@ export default class LogIn extends Component {
         <h3>Your name</h3>
         <input
           type="text"
-        value={username}
-        name="username"
+          value={username}
+          name="username"
           required
           onChange={this.handleChange}
           />
