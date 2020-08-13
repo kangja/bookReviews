@@ -3,7 +3,10 @@ import { Route } from "react-router-dom"
 import Login from "./Login"
 import SignUp from "./SignUp"
 import ShowBooks from "./ShowBooks"
-import {readAllBooks} from "../services/books"
+import BookDetails from "./BookDetails"
+
+
+import {readAllBooks } from "../services/books"
 
 export default class Main extends Component {
   state = {
@@ -25,26 +28,33 @@ export default class Main extends Component {
     return (
     <main>
       {/* ...props means history, location, match  */}
-      <Route path = "/login" render = {(props) => (
+      <Route exact path = "/login"  render = {(props) => (
         <Login
             {...props}
             handleLogin={handleLogin}
         />
         )} />
-        <Route path="/signup" render = {(props) => (
+        <Route exact path="/signup" render = {(props) => (
           <SignUp
             {...props}
             handleSignUp={handleSignUp}
           />
         )} />
-        <Route path="/" render = {() => (
+        <Route exact path="/" render = {() => (
           <ShowBooks
             books={this.state.books}
           />
         )} />
-
-
+        <Route path="/books/:id" render={(props) => (
+          <BookDetails
+           {...props}
+            currentUser={this.props.currentUser}
+            id={props.match.params.id}
+            books={this.state.books}
+          />
+        )} />
       </main>
     )
   }
 }
+
