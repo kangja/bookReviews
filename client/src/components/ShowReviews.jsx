@@ -25,23 +25,23 @@ export default class ShowReviews extends Component {
     }))
   }
   
-  handleReviewUpdate = async (id, reviewData) => {
-    const newReview = await putReview(this.state.book.id, id, reviewData);
-    this.setState(prevState => ({
-      reviews: prevState.reviews.map(review => review.id === parseInt(id) ? newReview : review)
-    }))
-  }
+  // handleReviewUpdate = async (id, reviewData) => {
+  //   const newReview = await putReview(this.state.book.id, id, reviewData);
+  //   this.setState(prevState => ({
+  //     reviews: prevState.reviews.map(review => review.id === parseInt(id) ? newReview : review)
+  //   }))
+  // }
 
-  handleReviewDelete = async (id) => {
-    await destroyReview(this.state.book.id, id);
-    this.setState(prevState => ({
-      reviews: prevState.reviews.filter(review => review.id !== id)
-    }))
-  }
+  // handleReviewDelete = async (id) => {
+  //   await destroyReview(this.state.book.id, id);
+  //   this.setState(prevState => ({
+  //     reviews: prevState.reviews.filter(review => review.id !== id)
+  //   }))
+  // }
 
 
   render() {
-    const { currentUser} = this.props;
+    const { currentUser, id} = this.props;
 
     return (
       <div>
@@ -51,7 +51,7 @@ export default class ShowReviews extends Component {
             <p>{review.content}</p>
             {currentUser && currentUser.id === review.id ?
               <>
-                <Link to={`/books/${this.props.id}/reviews/${review.id}/update`}>Edit</Link>
+                <Link to={`/books/:id/reviews/${review.id}`}>Edit</Link>
                 <button>Delete</button>
               </>
               :
@@ -59,8 +59,9 @@ export default class ShowReviews extends Component {
             }
           </div>
         ))}
-         {currentUser && (
-          <Link to={"/books/:id/create/reviews"}>write a review</Link>
+        
+        {currentUser && (
+          <Link to={`/books/${id}/create`}>Write a review</Link>
         )}
       </div>
     )

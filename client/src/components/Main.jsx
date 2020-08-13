@@ -4,6 +4,7 @@ import Login from "./Login"
 import SignUp from "./SignUp"
 import ShowBooks from "./ShowBooks"
 import BookDetails from "./BookDetails"
+import CreateReview from "./CreateReview"
 
 
 import {readAllBooks } from "../services/books"
@@ -45,14 +46,21 @@ export default class Main extends Component {
             books={this.state.books}
           />
         )} />
-        <Route path="/books/:id" render={(props) => (
+        <Route exact path="/books/:id" render={(props) => (
           <BookDetails
            {...props}
             currentUser={this.props.currentUser}
             id={props.match.params.id}
-            // books={this.state.books}
           />
         )} />
+        <Route path="/books/:id/create" render={(props) => (
+          <CreateReview
+            {...props}
+            handleReviewCreate={this.handleReviewCreate}
+            id={props.match.params.id}
+          />
+        )}
+        />
       </main>
     )
   }
