@@ -132,8 +132,7 @@ src
 | Authentication   |    H     |     2 hrs      |      1.5hrs     |    hrs    |
 | Working on Backend   |    H     |     4 hrs      |     6.2 hrs     |    hrs    |
 | Working on Front-End services and components   |    H     |     6 hrs      |     6.2 hrs     |    hrs    |
-| Working on Front-End   |    H     |     9 hrs      |     hrs     |    hrs    |
-| Working on Front End Crud   |    H     |     4 hrs      |     hrs     |    hrs    |
+| Working on Front End Crud   |    H     |     4 hrs      |     6hrs     |    hrs    |
 | CSS |     H     |     5 hrs      |     hrs     |    hrs      |
 | Media Queries |    H     |     3 hrs      |     hrs     |    hrs      |
 | TOTAL               |          |     hrs      |      hrs     |     hrs     |

@@ -49,8 +49,8 @@ export default class BookDetails extends Component {
 
 
   render() {
-    const { book, reviews } = this.state;
-    const { currentUser, id } = this.props;
+    const { book } = this.state;
+    const { currentUser } = this.props;
 
     return (
       <>

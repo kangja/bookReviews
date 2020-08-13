@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import { readAllReviews, postReview, putReview, destroyReview } from "../services/reviews"
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
+import {Route} from "react-router-dom"
 
 export default class ShowReviews extends Component {
   state = {
@@ -40,14 +41,11 @@ export default class ShowReviews extends Component {
 
 
   render() {
-    const { currentUser, id } = this.props;
+    const { currentUser} = this.props;
 
     return (
       <div>
         <h2>Reviews</h2>
-        {currentUser && (
-          <Link to={`/books/${id}/reviews`}>write a review</Link>
-        )}
         {this.state.reviews.map(review => (
           <div>
             <p>{review.content}</p>
@@ -61,6 +59,9 @@ export default class ShowReviews extends Component {
             }
           </div>
         ))}
+         {currentUser && (
+          <Link to={"/books/:id/create/reviews"}>write a review</Link>
+        )}
       </div>
     )
   }
