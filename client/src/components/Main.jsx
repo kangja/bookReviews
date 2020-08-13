@@ -21,7 +21,7 @@ export default class Main extends Component {
 
   render() {
     const { handleLogin, handleSignUp } = this.props;
-    
+
     return (
     <main>
       {/* ...props means history, location, match  */}
