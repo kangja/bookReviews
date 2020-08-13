@@ -1,13 +1,17 @@
 import React, {Component} from 'react'
 import {readOneBook} from "../services/books"
+import {readAllReviews, postReview, putReview, destroyReview } from "../services/reviews"
+
 
 export default class BookDetails extends Component {
   state = {
-    book: null
+    book: null, 
+    reviews: []
   }
 
   componentDidMount() {
     this.fetchBook();
+    this.fetchReviews();
   }
 
   fetchBook = async () => {
@@ -15,6 +19,33 @@ export default class BookDetails extends Component {
     this.setState({ book });
   }
   
+
+ fetchReviews = async () => {
+  const reviews = await readAllReviews(id);
+  this.setState({ reviews });
+}
+
+handleReviewCreate = async (reviewData) => {
+  const newReview = await postReview(this.bookId, reviewData);
+  this.setState(prevState => ({
+    reviews: [...prevState.reviews, newReview]
+  }))
+}
+  handleReviewUpdate = async (id, reviewData) => {
+    const newReview = await putReview(this.state.book.id, id, reviewData);
+    this.setState(prevState => ({
+      reviews: prevState.reviews.map(review => review.id === parseInt(id) ? newReview : review)
+    }))
+  }
+
+handleReviewDelete = async (id) => {
+  await destroyReview(this.state.book.id, id);
+  this.setState(prevState => ({
+    reviews: prevState.reviews.filter(review => review.id !== id)
+  }))
+} 
+
+
   render() {
     const { book } = this.state;
 
@@ -36,30 +67,3 @@ export default class BookDetails extends Component {
   }
 }
 
-
-{/* fetchReviews = async () => {
-//   const reviews = await readAllReviews(id);
-//   this.setState({ reviews });
-// }
-
-// handleReviewCreate = async (reviewData) => {
-//   const newReview = await postReview(this.bookId, reviewData);
-//   this.setState(prevState => ({
-//     reviews: [...prevState.reviews, newReview]
-//   }))
-// }
-
-//   handleReviewUpdate = async (id, reviewData) => {
-//     const newReview = await putReview(this.state.book.id, id, reviewData);
-//     this.setState(prevState => ({
-//       reviews: prevState.reviews.map(review => review.id === parseInt(id) ? newReview : review)
-//     }))
-//   }
-
-
-// handleReviewDelete = async (id) => {
-//   await destroyReview(this.state.book.id, id);
-//   this.setState(prevState => ({
-//     reviews: prevState.reviews.filter(review => review.id !== id)
-//   }))
-// } */}

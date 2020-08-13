@@ -50,7 +50,7 @@ export default class Main extends Component {
            {...props}
             currentUser={this.props.currentUser}
             id={props.match.params.id}
-            books={this.state.books}
+            // books={this.state.books}
           />
         )} />
       </main>
