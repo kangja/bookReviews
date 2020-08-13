@@ -1,12 +1,12 @@
 // rcc
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class ShowBooks extends Component {
-  render() {
+export default function ShowBooks(props) {
     return (
       <div>
-        
+        {props.books.map(book => (
+          <img alt={book.title} src={book.image} /> 
+        ))}
       </div>
     )
   }
-}

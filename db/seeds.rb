@@ -115,7 +115,7 @@ books= [
     price: "$14.44"
   }, 
   {
-    image: "https://images-na.ssl-images-amazon.com/images/I/41UFukWuw3L._SX326_BO1,204,203,200_.jpg",
+    image: "https://images-na.ssl-images-amazon.com/images/I/41XGZDGFaLL._SX308_BO1,204,203,200_.jpg",
     title: "Lean In: Women, Work, and the Will to Lead",
     author: "Sheryl Sandberg",
     summary: "In Lean In, Sheryl Sandberg reignited the conversation around women in the workplace. Lean In continues that conversation, combining personal anecdotes, hard data, and compelling research to change the conversation from what women can’t do to what they can. Sandberg provides practical advice on negotiation techniques, mentorship, and building a satisfying career.",
