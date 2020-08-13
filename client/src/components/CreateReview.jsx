@@ -5,6 +5,7 @@ export default class CreateReview extends Component {
     content: "",
     id: this.props.id
   }
+  
   handleChange = (e) => {
     const { name, value } = e.target;
     this.setState({
