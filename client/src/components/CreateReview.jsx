@@ -20,9 +20,9 @@ export default class CreateReview extends Component {
 
   handleReviewCreate = async (bookId, reviewData) => {
     const newReview = await postReview(bookId, reviewData);
-    // this.setState(prevState => ({
-    //   reviews: [...prevState.reviews, newReview]
-    // }))
+    this.setState(prevState => ({
+      reviews: [...prevState.reviews, newReview]
+    }))
   }
 
   render() {
