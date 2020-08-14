@@ -6,8 +6,10 @@ import ShowBooks from "./ShowBooks"
 import BookDetails from "./BookDetails"
 import CreateReview from "./CreateReview"
 import ShowReviews from "./ShowReviews"
+import UpdateReview from "./UpdateReview"
 import { readAllBooks } from "../services/books"
-import {postReview} from "../services/reviews"
+import { postReview } from "../services/reviews"
+
 
 export default class Main extends Component {
   state = {
@@ -86,6 +88,14 @@ export default class Main extends Component {
         )}
         />
         
+        <Route path="/books/:id/reviews/:review_id" render={(props) => (
+          <UpdateReview
+           {...props}
+            currentUser={this.props.currentUser}
+            id={props.match.params.id}
+            review_id={props.match.params.review_id}
+          />
+          )} />
       
       </main>
     )
