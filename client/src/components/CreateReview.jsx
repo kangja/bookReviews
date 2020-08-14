@@ -5,7 +5,7 @@ export default class CreateReview extends Component {
   state = {
     // reviews: this.props.reviews,
     content: "",
-    book_id: this.props.id,
+    // book_id: this.props.id,
   }
 
   // componentDidMount() {
@@ -19,12 +19,12 @@ export default class CreateReview extends Component {
     })
   }
 
-  handleReviewCreate = async (bookId, reviewData) => {
-    const newReview = await postReview(bookId, reviewData);
-    this.setState(prevState => ({
-      reviews: [...prevState.reviews, newReview]
-    }))
-  }
+  // handleReviewCreate = async (bookId, reviewData) => {
+  //   const newReview = await postReview(bookId, reviewData);
+  //   this.setState(prevState => ({
+  //     reviews: [...prevState.reviews, newReview]
+  //   }))
+  // }
 
   render() {
     const { history } = this.props;
@@ -32,9 +32,8 @@ export default class CreateReview extends Component {
 
       <form onSubmit={(e) => {
         e.preventDefault();
-        this.handleReviewCreate(this.state.book_id, this.state);
-        history.push(`/books/${this.state.book_id}`);
-        // window.location.reload();
+        this.props.handleReviewCreate(this.props.id, this.state);
+        history.push(`/books/${this.props.id}`);
       }}>
 
         <h1>Write your reviews</h1>

@@ -8,7 +8,7 @@ import CreateReview from "./CreateReview"
 import ShowReviews from "./ShowReviews"
 import UpdateReview from "./UpdateReview"
 import { readAllBooks } from "../services/books"
-import { postReview } from "../services/reviews"
+import { postReview, readAllReviews, destroyReview } from "../services/reviews"
 
 
 export default class Main extends Component {
@@ -25,6 +25,33 @@ export default class Main extends Component {
     const books = await readAllBooks();
     this.setState({ books });
   } 
+
+  fetchReviews = async (id) => {
+    const reviews = await readAllReviews(id);
+    this.setState({ reviews });
+  }
+
+  handleReviewDelete = async (bookId, review_id) => {
+    await destroyReview(bookId, review_id);
+    this.setState(prevState => ({
+      reviews: prevState.reviews.filter(review => review.id !== review_id)
+    }))
+  }
+
+
+  handleReviewCreate = async (bookId, reviewData) => {
+    const newReview = await postReview(bookId, reviewData);
+    this.setState(prevState => ({
+      reviews: [...prevState.reviews, newReview]
+    }))
+  }
+
+  handleReviewUpdate = async (bookId, user_id, reviewData) => {
+    const newReview = await putReview(bookId, user_id, reviewData);
+    this.setState(prevState => ({
+      reviews: prevState.reviews.map(review => user_id === parseInt(bookId) ? newReview : review)
+    }))
+  }
 
   // handleReviewCreate = async (reviewData) => {
   //   const newReview = await postReview(this.bookId, reviewData);
@@ -82,7 +109,7 @@ export default class Main extends Component {
         <Route path="/books/:id/create" render={(props) => (
           <CreateReview
             {...props}
-            // handleReviewCreate={this.handleReviewCreate}
+            handleReviewCreate={this.handleReviewCreate}
             id={props.match.params.id}
           />
         )}

@@ -18,12 +18,12 @@ export default class UpdateReview extends Component {
     })
   }
 
-  handleReviewUpdate = async (bookId, user_id, reviewData) => {
-    const newReview = await putReview(bookId, user_id, reviewData);
-    this.setState(prevState => ({
-      reviews: prevState.reviews.map(review => user_id === parseInt(bookId) ? newReview : review)
-    }))
-  }
+  // handleReviewUpdate = async (bookId, user_id, reviewData) => {
+  //   const newReview = await putReview(bookId, user_id, reviewData);
+  //   this.setState(prevState => ({
+  //     reviews: prevState.reviews.map(review => user_id === parseInt(bookId) ? newReview : review)
+  //   }))
+  // }
 
   handleChange = (e) => {
     const { name, value } = e.target;

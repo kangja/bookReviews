@@ -9,17 +9,17 @@ export default class ShowReviews extends Component {
   state = {
     book: null,
     reviews: [],
-    book_id: this.props.id
+    // book_id: this.props.id
   }
 
   componentDidMount() {
-    this.fetchReviews();
+    this.props.fetchReviews(this.props.id);
   }
 
-  fetchReviews = async () => {
-    const reviews = await readAllReviews(this.state.book_id);
-    this.setState({ reviews });
-  }
+  // fetchReviews = async () => {
+  //   const reviews = await readAllReviews(this.state.book_id);
+  //   this.setState({ reviews });
+  // }
   
   // handleReviewUpdate = async (id, reviewData) => {
   //   const newReview = await putReview(this.state.book.id, id, reviewData);
@@ -28,16 +28,16 @@ export default class ShowReviews extends Component {
   //   }))
   // }
 
-  handleReviewDelete = async (bookId, review_id) => {
-    await destroyReview(bookId, review_id);
-    this.setState(prevState => ({
-      reviews: prevState.reviews.filter(review => review.id !== bookId)
-    }))
-  }
+  // handleReviewDelete = async (bookId, review_id) => {
+  //   await destroyReview(bookId, review_id);
+  //   this.setState(prevState => ({
+  //     reviews: prevState.reviews.filter(review => review.id !== review_id)
+  //   }))
+  // }
 
   render() {
-    const { currentUser, id } = this.props;
-    const { reviews } = this.state;
+    const { currentUser, id, reviews } = this.props;
+    // const { reviews } = this.props;
 
     return (
       <div>
@@ -53,7 +53,7 @@ export default class ShowReviews extends Component {
             {currentUser && currentUser.id === review.user_id ?
               <>
                 <Link to={`/books/${id}/reviews/${review.id}`}>Edit</Link>
-                <button onClick={() => this.handleReviewDelete( this.state.book_id, review.id )}>Delete</button>
+                <button onClick={() => this.props.handleReviewDelete( this.props.id, review.id )}>Delete</button>
               </>
               :
               <></>

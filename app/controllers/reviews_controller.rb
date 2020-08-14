@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-  before_action :set_book, only: [:index, :show, :update, :destroy]
+  before_action :set_book, only: [:index, :show, :create, :update, :destroy]
   before_action :set_review, only: [:show, :update, :destroy]
   before_action :authorize_request, only: [:create, :update, :destroy]
 
@@ -17,6 +17,7 @@ class ReviewsController < ApplicationController
   # POST /books/id/reviews
   def create
     @review = Review.new(review_params)
+    @review.book = @book
     @review.user = @current_user
     if @review.save
       render json: @review, status: :created
