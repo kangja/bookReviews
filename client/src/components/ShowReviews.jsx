@@ -52,7 +52,7 @@ export default class ShowReviews extends Component {
             
             {currentUser && currentUser.id === review.user_id ?
               <>
-                <Link to={`/books/:id/reviews/${review.id}`}>Edit</Link>
+                <Link to={`/books/${id}/reviews/${review.id}`}>Edit</Link>
                 <button onClick={() => this.handleReviewDelete( this.state.book_id, review.id )}>Delete</button>
               </>
               :
