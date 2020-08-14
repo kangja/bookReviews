@@ -161,7 +161,7 @@ export default class Main extends Component {
         <Route path="/books/:id/create" render={(props) => (
           <CreateReview
             {...props}
-            handleReviewCreate={this.handleReviewCreate}
+            // handleReviewCreate={this.handleReviewCreate}
             id={props.match.params.id}
           />
         )}

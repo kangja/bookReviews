@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
+import {postReview} from "../services/reviews"
 
 export default class CreateReview extends Component {
   state= {
     content: "",
-    id: this.props.id,
+    book_id: this.props.id,
   }
 
   componentDidMount() {
-    this.props.handleReviewCreate();
+    this.handleReviewCreate();
   }
 
   handleChange = (e) => {
@@ -17,14 +18,21 @@ export default class CreateReview extends Component {
     })
   }
 
+  handleReviewCreate = async (bookId, reviewData) => {
+    const newReview = await postReview(bookId, reviewData);
+    // this.setState(prevState => ({
+    //   reviews: [...prevState.reviews, newReview]
+    // }))
+  }
+
   render() {
-    const { handleReviewCreate, history } = this.props;
+    const { history } = this.props;
     return (
 
       <form onSubmit={(e) => {
         e.preventDefault();
-        handleReviewCreate(this.state.content);
-        history.push(`/books/${this.state.id}`);
+        this.handleReviewCreate(this.state.book_id, this.state);
+        history.push(`/books/${this.state.book_id}`);
       }}>
 
         <h1>Write your reviews</h1>

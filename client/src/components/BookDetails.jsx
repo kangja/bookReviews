@@ -11,12 +11,12 @@ import { Route } from "react-router-dom"
 export default class BookDetails extends Component {
   state = {
     book: null,
-    reviews: []
+    // reviews: []
   }
 
   componentDidMount() {
     this.fetchBook();
-    this.fetchReviews();
+    // this.fetchReviews();
   }
 
   fetchBook = async () => {
@@ -25,10 +25,10 @@ export default class BookDetails extends Component {
   }
   
 
-   fetchReviews = async () => {
-    const reviews = await readAllReviews(this.props.id);
-    this.setState({ reviews });
-  }
+  //  fetchReviews = async () => {
+  //   const reviews = await readAllReviews(this.props.id);
+  //   this.setState({ reviews });
+  // }
 
   // handleReviewCreate = async (reviewData) => {
   //   const newReview = await postReview(this.bookId, reviewData);
@@ -37,19 +37,19 @@ export default class BookDetails extends Component {
   //   }))
   // }
 
-    handleReviewUpdate = async (id, reviewData) => {
-      const newReview = await putReview(this.state.book.id, id, reviewData);
-      this.setState(prevState => ({
-        reviews: prevState.reviews.map(review => review.id === parseInt(id) ? newReview : review)
-      }))
-  }
+  //   handleReviewUpdate = async (id, reviewData) => {
+  //     const newReview = await putReview(this.state.book.id, id, reviewData);
+  //     this.setState(prevState => ({
+  //       reviews: prevState.reviews.map(review => review.id === parseInt(id) ? newReview : review)
+  //     }))
+  // }
 
-  handleReviewDelete = async (id) => {
-    await destroyReview(this.state.book.id, id);
-    this.setState(prevState => ({
-      reviews: prevState.reviews.filter(review => review.id !== id)
-    }))
-  } 
+  // handleReviewDelete = async (id) => {
+  //   await destroyReview(this.state.book.id, id);
+  //   this.setState(prevState => ({
+  //     reviews: prevState.reviews.filter(review => review.id !== id)
+  //   }))
+  // } 
 
   render() {
     const { book, reviews } = this.state;

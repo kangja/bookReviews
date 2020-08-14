@@ -8,18 +8,18 @@ export default class ShowReviews extends Component {
 
   state = {
     book: null,
-    // reviews: [],
+    reviews: [],
     id: this.props.id
   }
 
-  // componentDidMount() {
-  //   this.props.fetchReviews();
-  // }
+  componentDidMount() {
+    this.fetchReviews();
+  }
 
-  // fetchReviews = async () => {
-  //   const reviews = await readAllReviews(this.state.id);
-  //   this.setState({ reviews });
-  // }
+  fetchReviews = async () => {
+    const reviews = await readAllReviews(this.state.id);
+    this.setState({ reviews });
+  }
   
   // handleReviewUpdate = async (id, reviewData) => {
   //   const newReview = await putReview(this.state.book.id, id, reviewData);
@@ -36,7 +36,8 @@ export default class ShowReviews extends Component {
   }
 
   render() {
-    const { currentUser, id, reviews} = this.props;
+    const { currentUser, id } = this.props;
+    const { reviews } = this.state;
 
     return (
       <div>
