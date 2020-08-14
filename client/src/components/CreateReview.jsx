@@ -2,14 +2,15 @@ import React, { Component } from 'react'
 import {postReview} from "../services/reviews"
 
 export default class CreateReview extends Component {
-  state= {
+  state = {
+    // reviews: this.props.reviews,
     content: "",
     book_id: this.props.id,
   }
 
-  componentDidMount() {
-    this.handleReviewCreate();
-  }
+  // componentDidMount() {
+  //   this.handleReviewCreate();
+  // }
 
   handleChange = (e) => {
     const { name, value } = e.target;
@@ -33,6 +34,7 @@ export default class CreateReview extends Component {
         e.preventDefault();
         this.handleReviewCreate(this.state.book_id, this.state);
         history.push(`/books/${this.state.book_id}`);
+        // window.location.reload();
       }}>
 
         <h1>Write your reviews</h1>
