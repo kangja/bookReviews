@@ -10,8 +10,8 @@ export default class UpdateReview extends Component {
     this.setFormData();
   }
 
-  setFormData = async() => {
-    const review = await readOneReview (this.state.book_id, this.props.reviewId);
+  setFormData = async () => {
+    const review = await readOneReview (this.props.id, this.props.reviewId);
     this.setState({
       content: review.content
     })
@@ -29,7 +29,7 @@ export default class UpdateReview extends Component {
     return (
         <form onSubmit={(e) => {
           e.preventDefault();
-          this.props.handleReviewUpdate(this.props.id, this.props.user_id, this.state.content)
+          this.props.handleReviewUpdate(this.props.id, this.props.reviewId, this.state)
           history.push(`/books/${this.props.id}`);
         }}>
 

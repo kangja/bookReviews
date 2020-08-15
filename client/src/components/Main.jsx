@@ -8,7 +8,7 @@ import CreateReview from "./CreateReview"
 import ShowReviews from "./ShowReviews"
 import UpdateReview from "./UpdateReview"
 import { readAllBooks } from "../services/books"
-import { postReview, readAllReviews, destroyReview, putReview } from "../services/reviews"
+import { postReview, readAllReviews, destroyReview, putReview, readOneReview } from "../services/reviews"
 
 export default class Main extends Component {
   state = {
@@ -37,10 +37,10 @@ export default class Main extends Component {
     }))
   }
 
-  handleReviewUpdate = async (bookId, user_id, reviewData) => {
-    const newReview = await putReview(bookId, user_id, reviewData);
+  handleReviewUpdate = async (bookId, review_id, reviewData) => {
+    const UpdateReview = await putReview(bookId, review_id, reviewData);
     this.setState(prevState => ({
-      reviews: prevState.reviews.map(review => review.id === parseInt(user_id) ? newReview : review)
+      reviews: prevState.reviews.map(review => review.id === parseInt(review_id) ? UpdateReview : review)
     }))
   }
 
@@ -50,6 +50,13 @@ export default class Main extends Component {
       reviews: prevState.reviews.filter(review => review.id !== review_id)
     }))
   }
+
+  // setFormData = async(bookId, review_id ) => {
+  //   const review = await readOneReview (bookId, review_id);
+  //   this.setState({
+  //     content: review.content
+  //   })
+  // }
 
   render() {
     const { handleLogin, handleSignUp } = this.props;
@@ -105,13 +112,14 @@ export default class Main extends Component {
         )}
         />
         
-        <Route exact path="/books/:id/reviews/:review_id" render={(props) => (
+        <Route exact path="/books/:id/reviews/:reviewId" render={(props) => (
           <UpdateReview
            {...props}
             currentUser={this.props.currentUser}
             id={props.match.params.id}
-            review_id={props.match.params.review_id}
+            reviewId={props.match.params.reviewId}
             handleReviewUpdate={this.handleReviewUpdate}
+            reviews={this.state.reviews}
           />
           )} />
       </main>

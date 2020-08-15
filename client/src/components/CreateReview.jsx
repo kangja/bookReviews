@@ -16,7 +16,6 @@ export default class CreateReview extends Component {
   render() {
     const { history } = this.props;
     return (
-
       <form onSubmit={(e) => {
         e.preventDefault();
         this.props.handleReviewCreate(this.props.id, this.state);

@@ -1,8 +1,6 @@
 import React, {Component} from 'react'
 import { readAllReviews, postReview, putReview, destroyReview } from "../services/reviews"
 import { Link } from "react-router-dom"
-import CreateReview from "./CreateReview"
-import {Route} from "react-router-dom"
 
 export default class ShowReviews extends Component {
 
@@ -41,7 +39,6 @@ export default class ShowReviews extends Component {
         ))
         }
       </div>
-
     )
   }
 }
