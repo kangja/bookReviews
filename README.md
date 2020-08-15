@@ -139,7 +139,7 @@ src
 
 
 <br>
-gi
+
 ### Server (Back End)
 
 #### ERD Model
