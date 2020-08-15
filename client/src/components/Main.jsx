@@ -8,8 +8,7 @@ import CreateReview from "./CreateReview"
 import ShowReviews from "./ShowReviews"
 import UpdateReview from "./UpdateReview"
 import { readAllBooks } from "../services/books"
-import { postReview, readAllReviews, destroyReview } from "../services/reviews"
-
+import { postReview, readAllReviews, destroyReview, putReview } from "../services/reviews"
 
 export default class Main extends Component {
   state = {
@@ -31,14 +30,6 @@ export default class Main extends Component {
     this.setState({ reviews });
   }
 
-  handleReviewDelete = async (bookId, review_id) => {
-    await destroyReview(bookId, review_id);
-    this.setState(prevState => ({
-      reviews: prevState.reviews.filter(review => review.id !== review_id)
-    }))
-  }
-
-
   handleReviewCreate = async (bookId, reviewData) => {
     const newReview = await postReview(bookId, reviewData);
     this.setState(prevState => ({
@@ -49,17 +40,17 @@ export default class Main extends Component {
   handleReviewUpdate = async (bookId, user_id, reviewData) => {
     const newReview = await putReview(bookId, user_id, reviewData);
     this.setState(prevState => ({
-      reviews: prevState.reviews.map(review => user_id === parseInt(bookId) ? newReview : review)
+      reviews: prevState.reviews.map(review => review.id === parseInt(user_id) ? newReview : review)
     }))
   }
 
-  // handleReviewCreate = async (reviewData) => {
-  //   const newReview = await postReview(this.bookId, reviewData);
-  //   this.setState(prevState => ({
-  //     reviews: [...prevState.reviews, newReview]
-  //   }))
-  // }
-  
+  handleReviewDelete = async (bookId, review_id) => {
+    await destroyReview(bookId, review_id);
+    this.setState(prevState => ({
+      reviews: prevState.reviews.filter(review => review.id !== review_id)
+    }))
+  }
+
   render() {
     const { handleLogin, handleSignUp } = this.props;
 
@@ -83,7 +74,6 @@ export default class Main extends Component {
           <ShowBooks
             books={this.state.books}
           />
-
         )} />
 
         <Route exact path="/books/:id" render={(props) => (
@@ -115,15 +105,15 @@ export default class Main extends Component {
         )}
         />
         
-        <Route path="/books/:id/reviews/:review_id" render={(props) => (
+        <Route exact path="/books/:id/reviews/:review_id" render={(props) => (
           <UpdateReview
            {...props}
             currentUser={this.props.currentUser}
             id={props.match.params.id}
             review_id={props.match.params.review_id}
+            handleReviewUpdate={this.handleReviewUpdate}
           />
           )} />
-      
       </main>
     )
   }

@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
-import {readOneReview, putReview} from "../services/reviews"
+import { readOneReview } from "../services/reviews"
 
 export default class UpdateReview extends Component {
   state = {
     content: "",
-    book_id: this.props.id
   }
 
   componentDidMount() {
@@ -18,13 +17,6 @@ export default class UpdateReview extends Component {
     })
   }
 
-  // handleReviewUpdate = async (bookId, user_id, reviewData) => {
-  //   const newReview = await putReview(bookId, user_id, reviewData);
-  //   this.setState(prevState => ({
-  //     reviews: prevState.reviews.map(review => user_id === parseInt(bookId) ? newReview : review)
-  //   }))
-  // }
-
   handleChange = (e) => {
     const { name, value } = e.target;
     this.setState({
@@ -37,8 +29,8 @@ export default class UpdateReview extends Component {
     return (
         <form onSubmit={(e) => {
           e.preventDefault();
-          this.handleReviewUpdate(this.state.book_id, this.props.user_id, this.state.content)
-          history.push(`/books/${this.state.book_id}`);
+          this.props.handleReviewUpdate(this.props.id, this.props.user_id, this.state.content)
+          history.push(`/books/${this.props.id}`);
         }}>
 
           <h1>Edit your reviews</h1>

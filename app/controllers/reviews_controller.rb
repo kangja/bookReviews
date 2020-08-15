@@ -28,6 +28,7 @@ class ReviewsController < ApplicationController
 
     # PATCH/PUT /books/id/reviews/1
   def update
+    @review.book = @book
     if @review.update(review_params)
       render json: @review
     else

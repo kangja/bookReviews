@@ -3,14 +3,8 @@ import {postReview} from "../services/reviews"
 
 export default class CreateReview extends Component {
   state = {
-    // reviews: this.props.reviews,
     content: "",
-    // book_id: this.props.id,
   }
-
-  // componentDidMount() {
-  //   this.handleReviewCreate();
-  // }
 
   handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,13 +12,6 @@ export default class CreateReview extends Component {
       [name]: value
     })
   }
-
-  // handleReviewCreate = async (bookId, reviewData) => {
-  //   const newReview = await postReview(bookId, reviewData);
-  //   this.setState(prevState => ({
-  //     reviews: [...prevState.reviews, newReview]
-  //   }))
-  // }
 
   render() {
     const { history } = this.props;
