@@ -28,6 +28,7 @@ class ReviewsController < ApplicationController
 
     # PATCH/PUT /books/id/reviews/1
   def update
+    # @review.content = @content
     if @review.update(review_params)
       render json: @review
     else
@@ -50,7 +51,7 @@ class ReviewsController < ApplicationController
   end
 
   def review_params
-    params.require(:review).permit(:content, :user_id, :book_id )
+    params.require(:review).permit(:content, :id, :book_id )
   end
 
 end

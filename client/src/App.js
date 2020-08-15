@@ -1,9 +1,9 @@
 import React, {Component} from "react"
-import './App.css';
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth'
 import Header from "./components/Header"
 import Main from "./components/Main"
 import { withRouter } from 'react-router-dom';
+import './App.css';
 
 class App extends Component {
   state = {
