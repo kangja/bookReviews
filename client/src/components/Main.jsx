@@ -1,5 +1,6 @@
 import React, {Component} from "react"
 import { Route } from "react-router-dom"
+import '../App.css';
 import Login from "./Login"
 import SignUp from "./SignUp"
 import ShowBooks from "./ShowBooks"
@@ -50,13 +51,6 @@ export default class Main extends Component {
       reviews: prevState.reviews.filter(review => review.id !== review_id)
     }))
   }
-
-  // setFormData = async(bookId, review_id ) => {
-  //   const review = await readOneReview (bookId, review_id);
-  //   this.setState({
-  //     content: review.content
-  //   })
-  // }
 
   render() {
     const { handleLogin, handleSignUp } = this.props;
