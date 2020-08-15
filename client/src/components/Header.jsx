@@ -3,7 +3,7 @@ import {Link} from "react-router-dom"
 
 export default function Header(props) {
   return (
-    <header>
+    <div className="header">
       <h1>bookReviews</h1>
       {
         props.currentUser ? (
@@ -18,6 +18,6 @@ export default function Header(props) {
           </>
         )
       }
-    </header>
+    </div>
   )
 }
