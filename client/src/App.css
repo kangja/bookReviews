@@ -1,17 +1,16 @@
 main {
-  padding-top: 20px;
+  /* padding-top: 20px; */
   height: 100vh;
   width: 100vw;
 }
 
-
 /* Header.jsx */
-
 .header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  box-shadow: 1px 1px 1px 0.3px #cecece
+  box-shadow: 1px 1px 1px 0.3px #cecece;
+  background-color:rgb(238, 186, 55)
   /* position: fixed; */
 }
 
@@ -68,6 +67,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 65px;
 }
 
 .sign-up {
@@ -81,18 +81,23 @@ a {
   width: 270px;
   height: 35px;
   box-sizing: border-box;
+font-size: 18px;
+
 }
 
 .email {
   width: 270px;
   height: 35px;
   box-sizing: border-box;
+font-size: 18px;
+
 }
 
 .password {
   width: 270px;
   height: 35px;
   box-sizing: border-box;
+  font-size: 18px;
 }
 
 .signup-button {
@@ -100,6 +105,7 @@ a {
   height: 35px;
   box-sizing: border-box;
   margin-top: 30px;
+  background-color:rgb(238, 186, 55);
 }
 
 /* Login */
@@ -107,6 +113,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 65px;
 }
 
 .login {
@@ -120,36 +127,81 @@ padding: 20px 20px 40px 34px;
 width: 270px;
 height: 35px;
 box-sizing: border-box;
+font-size: 18px;
 }
 
 .login-email {
 width: 270px;
 height: 35px;
 box-sizing: border-box;
+font-size: 18px;
+
 }
 
 .login-password {
 width: 270px;
 height: 35px;
 box-sizing: border-box;
+font-size: 18px;
+
 }
 
 .login-button {
+background-color: rgb(238, 186, 55);
 width: 270px;
 height: 35px;
 box-sizing: border-box;
 margin-top: 45px;
+font-size: 18px;
 }
 
 /* BookDetails.jsx */
 .bookdetails-container {
   display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.details-container {
+  /* justify-content: space-around; */
+  width: 50%;
+  font-size: 23px;
+}
+
+.bookdetails-image {
+  margin-left: 55px;
 }
 
 /* ShowReviews.jsx */
 .reviews-container {
   display: flex;
+  /* align-items: center; */
+  /* justify-content: space-between; */
+}
+
+.reviews-container2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* margin-right: 530px; */
+  margin-left: 650px;
+  margin-top: 50px;
+}
+
+.edit-delete {
+  display: flex;
   align-items: center;
+  /* flex-direction: column; */
+}
+
+.review-button {
+  margin-left: 179px;
+  margin-top: 77px;
+  width: 270px;
+  height: 35px;
+  box-sizing: border-box;
+  background-color: rgb(238, 186, 55);
 }
 
 /* UpdateReview.jsx */
@@ -164,4 +216,14 @@ margin-top: 45px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 45px;
+}
+
+.createreview-submit {
+  margin-top: 40px;
+  width: 270px;
+    height: 35px;
+    box-sizing: border-box;
+    margin-top: 30px;
+    background-color: rgb(238, 186, 55);
 }

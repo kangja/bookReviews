@@ -24,17 +24,18 @@ export default class CreateReview extends Component {
         history.push(`/books/${this.props.id}`);
       }}>
 
-        <h1>Write your reviews</h1>
+        <h1>Write your review</h1>
         <textarea
           type="text"
           name="content"
+          placeholder="Add Text"
           value={this.state.content}
           onChange={this.handleChange}
           cols={100}
           rows={30}
         />
 
-        <button>Submit</button>
+        <button className="createreview-submit">Submit</button>
       </form>
     )
   }

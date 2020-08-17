@@ -19,25 +19,33 @@ export default class ShowReviews extends Component {
     return (
       <div className="reviews-container">
          {currentUser && (
-          <Link to={`/books/${id}/create`}><button>Write a review</button></Link>
+          <Link to={`/books/${id}/create`}><button className="review-button">Write a review</button></Link>
         )}
 
+        <div className="reviews-container2">
         <h2>Reviews</h2>
         {reviews.map(review => (
-          <div>
+          <div className="edit-delete">
             <p>{review.content}</p>
-            
+  
             {currentUser && currentUser.id === review.user_id ?
-              <>
-                <Link to={`/books/${id}/reviews/${review.id}`}>Edit</Link>
+              <div>
+                <Link to={`/books/${id}/reviews/${review.id}`}><button>Edit</button></Link>
                 <button onClick={() => this.props.handleReviewDelete( this.props.id, review.id )}>Delete</button>
-              </>
+              </div>
+              // <hr></hr>
               :
               <></>
+              
             }
+           
+           <hr></hr>
           </div>
+           
         ))
+            
         }
+      </div>
       </div>
     )
   }
