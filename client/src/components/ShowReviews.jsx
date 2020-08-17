@@ -33,13 +33,13 @@ export default class ShowReviews extends Component {
                 <Link to={`/books/${id}/reviews/${review.id}`}><button>Edit</button></Link>
                 <button onClick={() => this.props.handleReviewDelete( this.props.id, review.id )}>Delete</button>
               </div>
-              // <hr></hr>
+    
               :
               <></>
               
             }
            
-           <hr></hr>
+         
           </div>
            
         ))
