@@ -41,10 +41,10 @@ export default class UpdateReview extends Component {
             name="content"
             value={this.state.content}
             onChange={this.handleChange}
-            cols={100}
-            rows={30}
+            cols={55}
+            rows={25}
           />
-          <button>Submit</button>
+          <button className="updatereview-submit">Submit</button>
         </form>
     )
   }

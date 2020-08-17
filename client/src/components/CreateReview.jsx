@@ -31,8 +31,8 @@ export default class CreateReview extends Component {
           placeholder="Add Text"
           value={this.state.content}
           onChange={this.handleChange}
-          cols={100}
-          rows={30}
+          cols={55}
+          rows={25}
         />
 
         <button className="createreview-submit">Submit</button>

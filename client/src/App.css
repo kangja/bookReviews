@@ -12,7 +12,7 @@ main {
   height: 100vh;
   width: 100vw;
   margin-top: 30px;
-  margin-left: 4.5%;
+  /* margin-left: 4.5%; */
 }
 
 /* Header.jsx */
@@ -21,12 +21,14 @@ main {
   justify-content: space-around;
   align-items: center;
   box-shadow: 1px 1px 1px 0.3px #cecece;
-  background-color:rgb(238, 186, 55)
-  /* position: fixed; */
+  /* background-color:rgb(238, 186, 55) */
+  /* background-color: rgb(32,104,164) */
+  background-color: #041E42;
 }
 
 .header-title {
-  color: black;
+  /* color: black; */
+  color: #FFFFFF;
   font-weight: 700;
 }
 
@@ -44,6 +46,7 @@ main {
 
 .header-welcome {
   font-size: 20px;
+  color: #FFFFFF;
 }
 
 .header-logout {
@@ -52,9 +55,11 @@ main {
 
 /* ShowBooks.jsx */
 .bookList {
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
   width: 90vw;
-  display: flex;
+  margin-left: 4.5%;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
@@ -211,16 +216,14 @@ font-size: 18px;
 /* ShowReviews.jsx */
 .reviews-container {
   display: flex;
-  /* margin-left: 3%; */
-  /* align-items: center; */
-  /* justify-content: space-between; */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .reviews-container2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* margin-right: 530px; */
   margin-left: 650px;
   margin-top: 50px;
 }
@@ -228,10 +231,15 @@ font-size: 18px;
 .edit-delete {
   display: flex;
   align-items: center;
-  /* flex-direction: column; */
+  font-size: 18px;
+  border-bottom: solid 1px;
+  height: 55px;
+  margin-left: 8px;
 }
 
 .review-button {
+  font-size: 20px;
+  font-weight: 540;
   margin-left: 179px;
   margin-top: 77px;
   width: 270px;
@@ -240,11 +248,35 @@ font-size: 18px;
   background-color: rgb(238, 186, 55);
 }
 
+.showreviews-content {
+  font-size: 23px;
+  margin-right: 20px;
+}
+
+.showreviews-edit {
+  font-size: 20px;
+}
+
+.showreviews-delete {
+  font-size: 20px;
+}
+
+
 /* UpdateReview.jsx */
 .updatereview-form {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.updatereview-submit {
+  margin-top: 40px;
+  width: 270px;
+  height: 35px;
+  box-sizing: border-box;
+  margin-top: 30px;
+  background-color: rgb(238, 186, 55);
+  font-size: 20px;
 }
 
 /* CreateReview.jsx */
@@ -258,8 +290,13 @@ font-size: 18px;
 .createreview-submit {
   margin-top: 40px;
   width: 270px;
-    height: 35px;
-    box-sizing: border-box;
-    margin-top: 30px;
-    background-color: rgb(238, 186, 55);
+  height: 35px;
+  box-sizing: border-box;
+  margin-top: 30px;
+  background-color: rgb(238, 186, 55);
+  font-size: 20px;
+}
+
+textarea { 
+  font-size: 20px; 
 }

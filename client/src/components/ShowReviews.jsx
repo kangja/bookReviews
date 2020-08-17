@@ -26,20 +26,20 @@ export default class ShowReviews extends Component {
         <h2>Reviews</h2>
         {reviews.map(review => (
           <div className="edit-delete">
-            <p>{review.content}</p>
-  
+            <p className="showreviews-content">{review.content}</p>
+
             {currentUser && currentUser.id === review.user_id ?
               <div>
-                <Link to={`/books/${id}/reviews/${review.id}`}><button>Edit</button></Link>
-                <button onClick={() => this.props.handleReviewDelete( this.props.id, review.id )}>Delete</button>
+                <Link to={`/books/${id}/reviews/${review.id}`}><button className="showreviews-edit">Edit</button></Link>
+                <button
+                  className="showreviews-delete"
+                  onClick={() => this.props.handleReviewDelete(this.props.id, review.id)}>Delete</button>
+              
               </div>
-    
+
               :
               <></>
-              
             }
-           
-         
           </div>
            
         ))
