@@ -27,7 +27,9 @@ export default class UpdateReview extends Component {
   render() {
     const { history } = this.props;
     return (
-        <form onSubmit={(e) => {
+      <form
+          className="updatereview-form"
+          onSubmit={(e) => {
           e.preventDefault();
           this.props.handleReviewUpdate(this.props.id, this.props.reviewId, this.state)
           history.push(`/books/${this.props.id}`);
@@ -42,7 +44,6 @@ export default class UpdateReview extends Component {
             cols={100}
             rows={30}
           />
-
           <button>Submit</button>
         </form>
     )

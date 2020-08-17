@@ -17,9 +17,9 @@ export default class ShowReviews extends Component {
     const { currentUser, id, reviews } = this.props;
 
     return (
-      <div>
+      <div className="reviews-container">
          {currentUser && (
-          <Link to={`/books/${id}/create`}>Write a review</Link>
+          <Link to={`/books/${id}/create`}><button>Write a review</button></Link>
         )}
 
         <h2>Reviews</h2>

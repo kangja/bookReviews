@@ -18,8 +18,10 @@ export default class LogIn extends Component {
     const { username, email, password } = this.state;
     const { handleLogin, history } = this.props;
 
-  return(
-    <form onSubmit={(e) => {
+    return (
+    <div className="login-container">
+      <form className="login"
+          onSubmit={(e) => {
       // we don't want to lose our state
       e.preventDefault();
       // make our api call
@@ -28,7 +30,8 @@ export default class LogIn extends Component {
     }}>
         <h2>Log In</h2>
         <h3>Your name</h3>
-        <input
+          <input
+          className="login-username"
           type="text"
           value={username}
           name="username"
@@ -36,7 +39,8 @@ export default class LogIn extends Component {
           onChange={this.handleChange}
           />
         <h3>Email</h3>
-        <input
+          <input
+          className="login-email"
           type="text"
           value={email}
           name="email"
@@ -44,15 +48,18 @@ export default class LogIn extends Component {
           onChange={this.handleChange}
         />
         <h3>Password</h3>
-        <input 
+          <input 
+          className="login-password"
           type="password"
           value={password}
           name="password"
           required
           onChange={this.handleChange}
-      />
-      <button>Submit</button>
-      </form>
+          />
+          <br></br>
+      <button className="login-button">Submit</button>
+        </form>
+        </div>
     )
   }
 }
