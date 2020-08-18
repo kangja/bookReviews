@@ -250,7 +250,6 @@ padding-top: 15px;
 }
 
 .details-container {
-  /* width: 50%; */
   width: 50vw;
   font-size: 23px;
 }
@@ -421,12 +420,37 @@ textarea {
   font-size: 20px; 
 }
 
+/* ----------- Macbook Air 13inch ----------- */
+@media only screen 
+   and (max-width : 1440px) 
+   and (max-height : 900px) {
+
+     .bookList {
+      margin-left: 0px;
+      width: 100vw;
+     }
+
+     .reviews-container2 {
+      margin-top: 5vh;
+      margin-bottom: 5vh;
+      margin-top: 0;
+     }
+
+     .login {
+      padding-bottom: 4vh;
+     }
+
+     .review-button {
+      margin-top: 3vh;
+      margin-left: 11vw;
+     }
+}
+
 /* ----------- iPad Pro 12.9" ----------- */
 /* Portrait and Landscape */
 @media only screen 
-  and (min-device-width: 1024px) 
-  and (max-device-width: 1366px)
-  and (-webkit-min-device-pixel-ratio: 2) {
+  and (max-device-width: 1024px) 
+  and (max-device-height: 1366px) {
     .details-container {
       margin-right: 3vw;
     }
@@ -451,14 +475,19 @@ textarea {
     .header-login {
       font-size: calc(8px + 1vw);
     }
+
+    .bookDetails-image {
+      margin-left: 0;
+      height: 64vh;
+      margin-top: 3vh;
+    }
 }
 
 /* ----------- iPhone X ----------- */
 /* Portrait and Landscape */
 @media only screen 
   and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
+  and (max-device-height: 812px)  { 
     .header-title {
       margin-left: 0px;
     }
@@ -583,5 +612,4 @@ textarea {
     .showreviews-reviews {
       margin-top: 0;
     }
-
   }
