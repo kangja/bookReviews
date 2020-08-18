@@ -358,13 +358,23 @@ padding-top: 15px;
 }
 
 .updatereview-submit {
-  margin-top: 40px;
-  width: 270px;
+  width: 291px;
   height: 35px;
   box-sizing: border-box;
   margin-top: 30px;
-  background-color: rgb(238, 186, 55);
-  font-size: 20px;
+  background-color: #45A2C5;
+  color: white;
+  font-size: 21px;
+  font-weight: 900;
+  padding-top: 15px;
+    padding-bottom: 37px;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    padding-left: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    padding-right: 0px;
+    border-radius: 30px;
 }
 
 /* CreateReview.jsx */
@@ -398,3 +408,76 @@ padding-top: 15px;
 textarea { 
   font-size: 20px; 
 }
+
+/* ----------- iPad Pro 12.9" ----------- */
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .details-container {
+      margin-right: 3vw;
+    }
+    .reviews-container2 {
+      margin-top: 1vh;
+    }
+
+    .bookdetails-container {
+      margin-top: 4vh;
+      margin-bottom: 4vh;
+    }
+
+    .review-button {
+      margin-top: 3vh;
+      margin-left: 9vw;
+    }
+}
+
+/* ----------- iPhone X ----------- */
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+    .header-title {
+      margin-left: 0px;
+    }
+
+    .header-signup {
+      margin-left: 0px;
+    }
+
+    .book-container {
+      margin-top: 0px;
+      margin-left: 0px;
+      margin-bottom: 4vh;
+      margin-right: 0px;
+      padding-top: 2vh;
+      padding-right: 1vw;
+      padding-left: 5px;
+      padding-bottom: 2vh;
+      width: 83vw;
+    }
+
+    .book-image {
+      width: 68vw;
+    }
+    
+    .bookdetails-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .details-container {
+      margin-left: auto;
+      margin-right: auto;
+      width: 88vw;
+    }
+
+    .bookdetails-image {
+      width: 70vw;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+  }
