@@ -25,34 +25,46 @@ main {
   font-size: calc(12px + 0.3vw);
   color: #FFFFFF;
   font-weight: 700;
-  margin-left: 4vw;
+  margin-left: 1vw;
 }
 
 .header-signup {
-  font-size: 22px;
-    color: #FFFFFF;
-    font-weight: 700;
-    margin-left: 48%;
+  font-size: calc(9px + 0.8vw);
   color: #FFFFFF;
   font-weight: 700;
+   margin-left: 48%;
+    color: #FFFFFF;
+    font-weight: 700;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.header-h1 {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
 }
 
 .header-login {
-  font-size: 20px;
+  font-size: calc(9px + 0.8vw);
   color: #FFFFFF;
   font-weight: 700;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .header-welcome {
+  margin-top: auto;
+  margin-bottom: auto;
   font-weight: 700;
   font-size: calc(9px + 0.6vw);
-  /* font-size: 22px; */
   color: #FFFFFF;
   font-weight: 700;
   margin-left: 53vw
 }
 
 .header-logout {
+  margin-top: auto;
+    margin-bottom: auto;
   border: 0;
   font-size: calc(9px + 0.6vw);
   background-color: rgb(247,194,51);
@@ -431,6 +443,14 @@ textarea {
       margin-top: 3vh;
       margin-left: 9vw;
     }
+
+    .header-signup {
+      font-size: calc(8px + 1vw);
+    }
+
+    .header-login {
+      font-size: calc(8px + 1vw);
+    }
 }
 
 /* ----------- iPhone X ----------- */
@@ -549,4 +569,19 @@ textarea {
     .signup-container {
       margin-top: 6vh;
     }
+
+    .sign-up {
+      padding-right: 6vw;
+      padding-left: 6vw;
+    }
+
+    .bookdetails-author-ptag{
+      margin-top: 2vh;
+      margin-bottom: 2vh;
+    }
+
+    .showreviews-reviews {
+      margin-top: 0;
+    }
+
   }

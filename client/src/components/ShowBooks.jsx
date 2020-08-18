@@ -1,4 +1,3 @@
-// rcc
 import React from 'react'
 import {Link} from "react-router-dom"
 
@@ -11,7 +10,6 @@ export default function ShowBooks(props) {
               <img className="book-image" alt={book.title} src={book.image} /> 
               <br></br>
               <div className="book-title">{book.title}</div>
-              {/* <div className="book-author">By: {book.author}</div> */}
               <div className="book-price">{book.price}</div>
 
               </div>
