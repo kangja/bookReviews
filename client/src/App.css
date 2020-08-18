@@ -1,3 +1,587 @@
-.App {
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+main {
+  margin-top: 5vh;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Header.jsx */
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #041E42;
+}
+
+.header-title {
+  font-size: calc(12px + 0.3vw);
+  color: #FFFFFF;
+  font-weight: 700;
+  margin-left: 1vw;
+}
+
+.header-signup {
+  font-size: calc(9px + 0.8vw);
+  color: #FFFFFF;
+  font-weight: 700;
+   margin-left: 48%;
+    color: #FFFFFF;
+    font-weight: 700;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.header-h1 {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+.header-login {
+  font-size: calc(9px + 0.8vw);
+  color: #FFFFFF;
+  font-weight: 700;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.header-welcome {
+  margin-top: auto;
+  margin-bottom: auto;
+  font-weight: 700;
+  font-size: calc(9px + 0.6vw);
+  color: #FFFFFF;
+  font-weight: 700;
+  margin-left: 53vw
+}
+
+.header-logout {
+  margin-top: auto;
+    margin-bottom: auto;
+  border: 0;
+  font-size: calc(9px + 0.6vw);
+  background-color: rgb(247,194,51);
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    border-radius: 3vh;
+}
+
+/* ShowBooks.jsx */
+.bookList {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 90vw;
+  margin-left: 4.5%;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.book-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* OPTION 1 */
+  box-shadow: 0 0 2px 4px #A0B5E8;
+  transition: all 0.25s;
+  padding: 25px;
+  margin: 10px 10px 60px;
+  width: 370px;
+}
+
+.book-title {
+  text-align: center;
+  padding-bottom: 20px;
+  color: black;
+  font-size: 22px;
+}
+
+.book-author {
+  padding-bottom: 20px;
+  color: #555
+}
+
+.book-price {
+  color: black;
+  font-weight: 800;
+  font-size: 22px;
+}
+
+.book-image:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* SignUp.jsx */
+.signup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 65px;
+}
+
+.sign-up {
+  background: #fff;
+  border: 4px solid #c4c4c4;
+  box-sizing: border-box;
+  padding: 20px 20px 40px 34px;
+  padding-right: 30px;
+}
+
+.username {
+  width: 270px;
+  height: 35px;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+.email {
+  width: 270px;
+  height: 35px;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+.password {
+  width: 270px;
+  height: 35px;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+.signup-button {
+  width: 291px;
+  height: 35px;
+  box-sizing: border-box;
+  margin-top: 30px;
+  background-color: #45A2C5;
+  color: white;
+  font-size: 21px;
+  font-weight: 900;
+  padding-top: 15px;
+    padding-bottom: 37px;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    padding-left: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    padding-right: 0px;
+    border-radius: 30px;
+}
+
+/* Login */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 65px;
+}
+
+.login {
+background: #fff;
+border: 4px solid #c4c4c4;
+box-sizing: border-box;
+padding: 20px 20px 40px 34px;
+padding-right: 50px;
+padding-bottom: 65px;
+}
+
+.login-username {
+width: 270px;
+height: 35px;
+box-sizing: border-box;
+font-size: 18px;
+}
+
+.login-email {
+width: 270px;
+height: 35px;
+box-sizing: border-box;
+font-size: 18px;
+
+}
+
+.login-password {
+width: 270px;
+height: 35px;
+box-sizing: border-box;
+font-size: 18px;
+
+}
+
+.login-button {
+margin-top: 45px;
+width: 270px;
+height: 35px;
+box-sizing: border-box;
+margin-top: 30px;
+background-color: #45A2C5;
+color: white;
+font-size: 21px;
+font-weight: 900;
+padding-top: 15px;
+  padding-bottom: 37px;
+  border-top-width: 0px;
+  border-right-width: 0px;
+  padding-left: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  padding-right: 0px;
+  border-radius: 30px;
+}
+
+/* BookDetails.jsx */
+.bookdetails-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 7vh;
+  margin-bottom: 7vh;
+}
+
+.details-container {
+  /* width: 50%; */
+  width: 50vw;
+  font-size: 23px;
+}
+
+.bookdetails-image {
+  margin-left: 3vw;
+}
+
+.bookdetails-title {
+  font-weight: 700;
+}
+
+.bookdetails-price {
+  font-weight: 500;
+  color: red;
+}
+
+.bookdetails-author {
+  color: #5b8bff;
+  font-weight: 700;
+}
+
+.bookdetails-summary {
+  background-color: #dbdbdb;
+  color: #000000;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  /* font-weight: 600; */
+}
+
+.bookdetails-pages {
+  text-decoration: underline;
+}
+
+.bookdetails-genre {
+  color: #5b8bff;
+  font-weight: 700;
+}
+/* ShowReviews.jsx */
+.reviews-container {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reviews-container2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+.showreviews-reviews {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 100px;
+  background-color: black;
+  color: white;
+  width: 105px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 8px;
+  padding-left: 8px;
+  height: 30px;
   text-align: center;
 }
+
+
+.edit-delete {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  border-bottom: solid 1px;
+  height: 55px;
+  margin-left: 8px;
+}
+
+.review-button {
+  border: 0;
+  padding-top: 10px;
+  padding-bottom: 38px;
+  font-size: 25px;
+  font-weight: 540;
+  margin-left: 12vw;
+  margin-top: 77px;
+  width: 270px;
+  height: 35px;
+  box-sizing: border-box;
+  background-color: #45A2C5;
+  color: #FFFFFF;
+  font-weight: 900
+}
+
+.showreviews-content {
+  font-size: 27px;
+  margin-right: 20px;
+  } 
+
+.showreviews-edit {
+  font-size: 20px;
+  margin-right: 7px;
+}
+
+.showreviews-delete {
+  font-size: 20px;
+}
+
+/* UpdateReview.jsx */
+.updatereview-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.updatereview-submit {
+  width: 291px;
+  height: 35px;
+  box-sizing: border-box;
+  margin-top: 30px;
+  background-color: #45A2C5;
+  color: white;
+  font-size: 21px;
+  font-weight: 900;
+  padding-top: 15px;
+    padding-bottom: 37px;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    padding-left: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    padding-right: 0px;
+    border-radius: 30px;
+}
+
+/* CreateReview.jsx */
+.createreview-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 45px;
+}
+
+.createreview-submit {
+  width: 291px;
+    height: 35px;
+    box-sizing: border-box;
+    margin-top: 30px;
+    background-color: #45A2C5;
+    color: white;
+    font-size: 21px;
+    font-weight: 900;
+    padding-top: 15px;
+    padding-bottom: 37px;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    padding-left: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    padding-right: 0px;
+    border-radius: 30px;
+}
+
+textarea { 
+  font-size: 20px; 
+}
+
+/* ----------- iPad Pro 12.9" ----------- */
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .details-container {
+      margin-right: 3vw;
+    }
+    .reviews-container2 {
+      margin-top: 1vh;
+    }
+
+    .bookdetails-container {
+      margin-top: 4vh;
+      margin-bottom: 4vh;
+    }
+
+    .review-button {
+      margin-top: 3vh;
+      margin-left: 9vw;
+    }
+
+    .header-signup {
+      font-size: calc(8px + 1vw);
+    }
+
+    .header-login {
+      font-size: calc(8px + 1vw);
+    }
+}
+
+/* ----------- iPhone X ----------- */
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+    .header-title {
+      margin-left: 0px;
+    }
+
+    .header-signup {
+      margin-left: 0px;
+    }
+
+    .book-container {
+      margin-top: 0px;
+      margin-left: 0px;
+      margin-bottom: 4vh;
+      margin-right: 0px;
+      padding-top: 2vh;
+      padding-right: 1vw;
+      padding-left: 5px;
+      padding-bottom: 2vh;
+      width: 83vw;
+    }
+
+    .book-image {
+      width: 68vw;
+    }
+    
+    .bookdetails-container {
+      display: flex;
+      flex-direction: column;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .details-container {
+      margin-left: auto;
+      margin-right: auto;
+      width: 88vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .bookdetails-image {
+      width: 70vw;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .reviews-container {
+      flex-direction: column;
+    }
+
+    .showreviews-content {
+      font-size: calc(13px + 2vw);
+    }
+
+    .review-button {
+      margin-top: 3vh;
+      margin-left: 15vw;
+    }
+
+    .reviews-container2 {
+      margin-top: 3vh;
+    }
+
+    .showreviews-edit {
+      font-size: 2vh;
+    }
+
+    .showreviews-delete {
+      font-size: 4.5vw;
+    }
+
+    .edit-delete {
+      margin-right: 1vw;
+      margin-left: 1vw;
+    }
+
+    textarea {
+      font-size: calc(8px + 0.5vw);
+      width: 90vw;
+    }
+
+    .createreview-form {
+      margin-top: 0;
+    }
+
+    .header-welcome {
+      margin-left: 0px;
+    }
+
+    .header-signup {
+      font-size: calc(9px + 2vw);
+    }
+
+    .header-login {
+      font-size: calc(9px + 2vw);
+    }
+
+    .login-container {
+      margin-top: 6vh;
+    }
+
+    .login {
+      padding-right: 8vw;
+      padding-left: 8vw;
+      padding-bottom: 5vh;
+    }
+
+    .signup-container {
+      margin-top: 6vh;
+    }
+
+    .sign-up {
+      padding-right: 6vw;
+      padding-left: 6vw;
+    }
+
+    .bookdetails-author-ptag{
+      margin-top: 2vh;
+      margin-bottom: 2vh;
+    }
+
+    .showreviews-reviews {
+      margin-top: 0;
+    }
+
+  }
