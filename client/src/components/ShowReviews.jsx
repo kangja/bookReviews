@@ -19,11 +19,12 @@ export default class ShowReviews extends Component {
     return (
       <div className="reviews-container">
          {currentUser && (
-          <Link to={`/books/${id}/create`}><button className="review-button">Write a review</button></Link>
+          <Link to={`/books/${id}/create`}>
+            <button className="review-button">Write a review</button></Link>
         )}
 
         <div className="reviews-container2">
-        <h2>Reviews</h2>
+        <h2 className="showreviews-reviews">Reviews</h2>
         {reviews.map(review => (
           <div className="edit-delete">
             <p className="showreviews-content">{review.content}</p>
@@ -34,16 +35,12 @@ export default class ShowReviews extends Component {
                 <button
                   className="showreviews-delete"
                   onClick={() => this.props.handleReviewDelete(this.props.id, review.id)}>Delete</button>
-              
               </div>
-
               :
               <></>
             }
           </div>
-           
-        ))
-            
+        ))   
         }
       </div>
       </div>

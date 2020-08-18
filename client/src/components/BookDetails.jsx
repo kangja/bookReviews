@@ -24,12 +24,14 @@ export default class BookDetails extends Component {
           <div className="bookdetails-container">
             <img src={book.image} className="bookdetails-image" />
             <div className="details-container">
-            <p>Title: {book.title}</p>
-            <p>Author: {book.author}</p>
-            <p>Summary: {book.summary}</p>
-            <p>Page Number: {book.page_number}</p>
-            <p>Genre: {book.genre}</p>
-            <p>Price: {book.price}</p>
+            <p className="bookdetails-title">Title: <span classname="bookdetails-title">{book.title}</span></p>
+              <p>by <span className="bookdetails-author">{book.author}</span></p>
+              
+              <p className="bookdetails-summary">Summary:<br></br><br></br><span className="bookdetails-summary2">{book.summary}</span></p>
+
+            <p className="bookdetails-pages">Pages: {book.page_number}</p>
+            <p>Genre: <span className="bookdetails-genre">{book.genre}</span></p>
+            <p className="bookdetails-price">Price: {book.price}</p>
             </div>
           </div>
         )}

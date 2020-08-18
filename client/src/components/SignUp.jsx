@@ -56,7 +56,7 @@ export default class SignUp extends Component {
           onChange={this.handleChange}
       />
       <p>Passwords must be at least 6 characters.</p>
-      <button className="signup-button">Create your bookReviews account</button>
+      <button className="signup-button">Create account</button>
         </form>
         </div>
     )
