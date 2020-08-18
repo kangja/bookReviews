@@ -466,12 +466,17 @@ textarea {
     .bookdetails-container {
       display: flex;
       flex-direction: column;
+      margin-top: 0;
+      margin-bottom: 0;
     }
 
     .details-container {
       margin-left: auto;
       margin-right: auto;
       width: 88vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .bookdetails-image {
@@ -480,4 +485,68 @@ textarea {
       margin-right: auto;
     }
 
+    .reviews-container {
+      flex-direction: column;
+    }
+
+    .showreviews-content {
+      font-size: calc(13px + 2vw);
+    }
+
+    .review-button {
+      margin-top: 3vh;
+      margin-left: 15vw;
+    }
+
+    .reviews-container2 {
+      margin-top: 3vh;
+    }
+
+    .showreviews-edit {
+      font-size: 2vh;
+    }
+
+    .showreviews-delete {
+      font-size: 4.5vw;
+    }
+
+    .edit-delete {
+      margin-right: 1vw;
+      margin-left: 1vw;
+    }
+
+    textarea {
+      font-size: calc(8px + 0.5vw);
+      width: 90vw;
+    }
+
+    .createreview-form {
+      margin-top: 0;
+    }
+
+    .header-welcome {
+      margin-left: 0px;
+    }
+
+    .header-signup {
+      font-size: calc(9px + 2vw);
+    }
+
+    .header-login {
+      font-size: calc(9px + 2vw);
+    }
+
+    .login-container {
+      margin-top: 6vh;
+    }
+
+    .login {
+      padding-right: 8vw;
+      padding-left: 8vw;
+      padding-bottom: 5vh;
+    }
+
+    .signup-container {
+      margin-top: 6vh;
+    }
   }
