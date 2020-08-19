@@ -11,7 +11,6 @@ export default function ShowBooks(props) {
               <br></br>
               <div className="book-title">{book.title}</div>
               <div className="book-price">{book.price}</div>
-
               </div>
             </Link>
         ))}

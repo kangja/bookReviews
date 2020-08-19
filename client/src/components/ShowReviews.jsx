@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import { readAllReviews, postReview, putReview, destroyReview } from "../services/reviews"
 import { Link } from "react-router-dom"
 
 export default class ShowReviews extends Component {

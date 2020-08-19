@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import {postReview} from "../services/reviews"
 
 export default class CreateReview extends Component {
   state = {

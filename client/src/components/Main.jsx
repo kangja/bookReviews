@@ -9,7 +9,7 @@ import CreateReview from "./CreateReview"
 import ShowReviews from "./ShowReviews"
 import UpdateReview from "./UpdateReview"
 import { readAllBooks } from "../services/books"
-import { postReview, readAllReviews, destroyReview, putReview, readOneReview } from "../services/reviews"
+import { postReview, readAllReviews, destroyReview, putReview } from "../services/reviews"
 
 export default class Main extends Component {
   state = {
