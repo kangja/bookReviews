@@ -4,7 +4,16 @@ import {Link} from "react-router-dom"
 export default function Header(props) {
   return (
     <div className="header">
-      <Link to ="/" className="header-title"><h1 className="header-h1">bookReviews</h1></Link>
+      <Link to="/" className="header-title"><h1 className="header-h1">bookReviews</h1></Link>
+      <form className="search-form">
+                  <input
+                    className="search-input"
+                    type="text"
+                    placeholder="Search"
+                    value={props.search}
+                    onChange={props.updateSearch}
+                  />
+                </form>
       {
         props.currentUser ? (
           <>

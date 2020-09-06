@@ -73,6 +73,31 @@ main {
   border-radius: 3vh;
 }
 
+.search-input {
+  width: 70vw;
+  font-size: 18px;
+  letter-spacing: 0.1px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin: 40px;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-input {
+  margin: 0;
+  width: 9vw;
+  font-size: 18px;
+  letter-spacing: 0.1px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+}
+
 /* ShowBooks.jsx */
 .bookList {
   display: flex;
@@ -417,7 +442,7 @@ textarea {
 }
 
 /* ----------- Macbook Air 13inch ----------- */
-@media only screen and (max-width : 1440px) and (max-height : 900px) {
+@media only screen and (min-width : 1440px) and (max-height : 900px) {
 .bookList {
   margin-left: 0px;
   width: 100vw;

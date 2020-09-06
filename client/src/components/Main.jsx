@@ -14,17 +14,24 @@ import { postReview, readAllReviews, destroyReview, putReview } from "../service
 export default class Main extends Component {
   state = {
     books: [],
-    reviews: []
+    reviews: [],
+    search: ""
   }
 
   componentDidMount() {
     this.fetchBooks();
   }
 
+  updateSearch = (e) => {
+    this.setState({
+      search: e.target.value,
+    })
+  }
+
   fetchBooks = async () => {
     const books = await readAllBooks();
     this.setState({ books });
-  } 
+  }
 
   fetchReviews = async (id) => {
     const reviews = await readAllReviews(id);
@@ -52,6 +59,12 @@ export default class Main extends Component {
     }))
   }
 
+  filteredBooks = this.state.books.filter((book) => {
+    return book.title
+      .toLowerCase()
+      .includes(this.state.search.toLowerCase());
+  });
+
   render() {
     const { handleLogin, handleSignUp } = this.props;
 
@@ -73,7 +86,7 @@ export default class Main extends Component {
 
         <Route exact path="/" render = {() => (
           <ShowBooks
-            books={this.state.books}
+            filteredBooks={this.filteredBooks}
           />
         )} />
 

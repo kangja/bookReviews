@@ -7,7 +7,7 @@ import './App.css';
 
 class App extends Component {
   state = {
-    currentUser: null
+    currentUser: null,
   }
 
   // as the page first loads, we want to run handleVerify if there is a valid token in local storage we can use. If we have it, we don't need to log in again.
@@ -39,6 +39,7 @@ class App extends Component {
     this.setState({ currentUser });
   }
 
+
   render() {
     return (
       <div className="App">
@@ -46,6 +47,7 @@ class App extends Component {
           currentUser={this.state.currentUser}
           handleLogout={this.handleLogout}
         />
+
         <Main
           currentUser={this.state.currentUser}
           handleLogin={this.handleLogin}

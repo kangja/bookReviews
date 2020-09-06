@@ -4,7 +4,7 @@ import {Link} from "react-router-dom"
 export default function ShowBooks(props) {
     return (
       <div className="bookList">
-        {props.books.map(book => (
+        {props.filteredBooks.map((book) => (
           <Link to={`/books/${book.id}`}>
             <div className="book-container">
               <img className="book-image" alt={book.title} src={book.image} /> 
