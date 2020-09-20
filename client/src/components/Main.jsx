@@ -22,11 +22,11 @@ export default class Main extends Component {
     this.fetchBooks();
   }
 
-  updateSearch = (e) => {
-    this.setState({
-      search: e.target.value,
-    })
-  }
+  // updateSearch = (e) => {
+  //   this.setState({
+  //     search: e.target.value,
+  //   })
+  // }
 
   fetchBooks = async () => {
     const books = await readAllBooks();
@@ -59,11 +59,11 @@ export default class Main extends Component {
     }))
   }
 
-  filteredBooks = this.state.books.filter((book) => {
-    return book.title
-      .toLowerCase()
-      .includes(this.state.search.toLowerCase());
-  });
+  // filteredBooks = this.state.books.filter((book) => {
+  //   return book.title
+  //     .toLowerCase()
+  //     .includes(this.state.search.toLowerCase());
+  // });
 
   render() {
     const { handleLogin, handleSignUp } = this.props;
@@ -84,9 +84,9 @@ export default class Main extends Component {
           />
         )} />
 
-        <Route exact path="/" render = {() => (
+      <Route exact path="/" render = {() => (
           <ShowBooks
-            filteredBooks={this.filteredBooks}
+            books={this.state.books}
           />
         )} />
 

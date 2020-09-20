@@ -73,30 +73,30 @@ main {
   border-radius: 3vh;
 }
 
-.search-input {
+/* .search-input {
   width: 70vw;
   font-size: 18px;
   letter-spacing: 0.1px;
   padding: 12px 20px 12px 40px;
   border: 1px solid #ddd;
   margin: 40px;
-}
+} */
 
-.search-form {
+/* .search-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+} */
 
-.search-input {
+/* .search-input {
   margin: 0;
   width: 9vw;
   font-size: 18px;
   letter-spacing: 0.1px;
   padding: 12px 20px 12px 40px;
   border: 1px solid #ddd;
-}
+} */
 
 /* ShowBooks.jsx */
 .bookList {
